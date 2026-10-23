@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f3eb">
+  <meta name="description" content="A beautiful wedding invitation celebrating a lifetime of love.">
+  <title>Htwe & Htun | Wedding Invitation</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #f8f3eb;
+      --paper: #fffdf8;
+      --gold: #ad8b55;
+      --ink: #493b31;
+      --muted: #8b7a6a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: "Cormorant Garamond", sans-serif;
+      font-weight: 300;
+      text-align: center;
+      line-height: 1.8;
+    }
+
+    /* .cormorant-garamond {
+      font-family: "Cormorant Garamond", serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    } */
+
+    .hero {
+      min-height: 100vh;
+      padding: 55px 20px 65px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at top, #fffdf8 0%, transparent 65%),
+        var(--cream);
+    }
+
+    .frame {
+      width: min(100%, 650px);
+      padding: 45px 22px;
+      border: 1px solid #c6ad83;
+      outline: 1px solid #e5d7bf;
+      outline-offset: 6px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    h1, h2, .names, .ampersand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 400;
+    }
+
+    .intro {
+      margin-top: 25px;
+      font-size: 13px;
+    }
+
+    .names {
+      margin: 16px 0;
+      font-size: clamp(58px, 12vw, 92px);
+      line-height: 0.94;
+    }
+
+    .ampersand {
+      display: block;
+      margin: 10px 0;
+      font-size: 44px;
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .ornament {
+      width: 70px;
+      height: 1px;
+      background: var(--gold);
+      margin: 25px auto;
+    }
+
+    .date {
+      font-size: 12px;
+      letter-spacing: 3px;
+    }
+
+    .photo {
+      display: block;
+      width: min(100%, 390px);
+      height: 390px;
+      object-fit: cover;
+      margin: 32px auto 25px;
+      border: 5px solid var(--paper);
+      outline: 1px solid #d6c19c;
+      outline-offset: 3px;
+      background: #e8ddd0;
+    }
+
+    .message {
+      max-width: 400px;
+      margin: 20px auto;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 23px;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      margin-top: 18px;
+      background: var(--gold);
+      color: white;
+      text-decoration: none;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+
+    .button:hover {
+      background: #8c6b3d;
+    }
+
+    .section {
+      padding: 75px 20px;
+    }
+
+    .section h2 {
+      font-size: clamp(37px, 7vw, 52px);
+      line-height: 1.2;
+      margin: 12px 0 18px;
+    }
+
+    .countdown {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin: 32px auto 0;
+    }
+
+    .time-box {
+      width: 83px;
+      padding: 15px 5px;
+      background: var(--paper);
+      border: 1px solid #e5d7bf;
+    }
+
+    .time-box strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 34px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .time-box span {
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .details-section {
+      background: #efe5d8;
+    }
+
+    .details {
+      max-width: 480px;
+      margin: 28px auto 0;
+      padding: 38px 20px;
+      background: var(--paper);
+      border: 1px solid #d6c19c;
+    }
+
+    .detail-label {
+      margin-top: 16px;
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .detail-value {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 24px;
+    }
+
+    footer {
+      padding: 35px 15px;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 480px) {
+      .frame {
+        padding: 35px 16px;
+      }
+
+      .photo {
+        height: 300px;
+      }
+
+      .section {
+        padding: 58px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body class="cormorant-garamond">
+  <header class="hero">
+    <div class="frame">
+      <p class="eyebrow">Together with our families</p>
+      <p class="intro">Joyfully invite you to celebrate their wedding</p>
+
+      <h1 class="names">
+        Khun Yan Naing Htwe
+        <span class="ampersand">&</span>
+        Nang Sein Htun
+      </h1>
+
+      <div class="ornament"></div>
+
+      <p class="date">12 · 12 · 2026</p>
+
+      <img
+        class="photo"
+        src="sein-htun-wedding.jpeg"
+        alt="Wedding celebration"
+      >
+
+      <p class="message">
+        Two hearts, one love, and a beautiful beginning to forever.
+      </p>
+
+      <a class="button" href="#details">Explore the Invitation</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <p class="eyebrow">Save the date</p>
+    <h2>Until Our Forever</h2>
+    <p>We cannot wait to celebrate with you.</p>
+
+    <div class="countdown">
+      <div class="time-box">
+        <strong id="days">--</strong>
+        <span>Days</span>
+      </div>
+      <div class="time-box">
+        <strong id="hours">--</strong>
+        <span>Hours</span>
+      </div>
+      <div class="time-box">
+        <strong id="minutes">--</strong>
+        <span>Minutes</span>
+      </div>
+      <div class="time-box">
+        <strong id="seconds">--</strong>
+        <span>Seconds</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section details-section" id="details">
+    <p class="eyebrow">The celebration</p>
+    <h2>Join Our Wedding</h2>
+
+    <div class="details">
+      <p class="detail-label">Date</p>
+      <p class="detail-value">December 12, 2026</p>
+
+      <div class="ornament"></div>
+
+      <p class="detail-label">Time</p>
+      <p class="detail-value">4:00 <span>pm</span></p>
+
+      <div class="ornament"></div>
+
+      <p class="detail-label">Venue</p>
+      <p class="detail-value">Taunggyi Hotel</p>
+      <p>Taunggyi, Myanmar</p>
+
+      <a
+        class="button"
+        href="https://www.google.com/maps/place/Taunggyi+Hotel/@20.7748562,97.0230668,14z/data=!4m13!1m2!2m1!1sTaunggyi+Hotel!3m9!1s0x30ce87b4bd186189:0x464f1ac7c708f638!5m2!4m1!1i2!8m2!3d20.7689792!4d97.0437746!15sCg5UYXVuZ2d5aSBIb3RlbJIBBWhvdGVsqgFCEAEqCSIFaG90ZWwoADIfEAEiG716K2bmY7SepH-DfDL3A8NH6iS50AJCLe99zjISEAIiDnRhdW5nZ3lpIGhvdGVs4AEA!16s%2Fg%2F1tcwzbn1?entry=ttu&g_ep=EgoyMDI2MTAxOC4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noopener noreferrer"
+      >View Location</a>
+    </div>
+  </section>
+
+  <footer>
+    MADE WITH LOVE ♡<br>
+    KHUN YAN NAING HTWE & NANG SEIN HTUN · 2026
+  </footer>
+
+  <script>
+    // Replace this with the actual wedding date and local time.
+    const weddingDate = new Date(
+      "2026-12-12T16:00:00+06:30"
+    ).getTime();
+
+    const fields = ["days", "hours", "minutes", "seconds"];
+
+    function updateCountdown() {
+      const difference = weddingDate - Date.now();
+
+      if (difference <= 0) {
+        fields.forEach(id => {
+          document.getElementById(id).textContent = "0";
+        });
+        return;
+      }
+
+      const values = [
+        Math.floor(difference / 86400000),
+        Math.floor((difference % 86400000) / 3600000),
+        Math.floor((difference % 3600000) / 60000),
+        Math.floor((difference % 60000) / 1000)
+      ];
+
+      fields.forEach((id, index) => {
+        document.getElementById(id).textContent = values[index];
+      });
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
